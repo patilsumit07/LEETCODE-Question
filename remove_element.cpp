@@ -1,0 +1,46 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int k = 0; // Pointer to keep track of the position for valid elements
+        
+        for (int i = 0; i < nums.size(); i++) {
+            // If the current element is not equal to 'val', keep it
+            if (nums[i] != val) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        
+        return k; // Return the number of elements not equal to 'val'
+    }
+};
+
+int main() {
+    Solution solution;
+    
+    // Test Case: Remove all occurrences of 3
+    vector<int> nums = {3, 2, 2, 3};
+    int val = 3;
+    
+    cout << "Original array: ";
+    for (int num : nums) cout << num << " ";
+    cout << "\nValue to remove: " << val << endl;
+    
+    // Call the function
+    int k = solution.removeElement(nums, val);
+    
+    // Output the results
+    cout << "Modified array length (k): " << k << endl;
+    cout << "Modified array elements: ";
+    for (int i = 0; i < k; i++) {
+        cout << nums[i] << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
