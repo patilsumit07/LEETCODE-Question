@@ -1,2 +1,2 @@
 # LEETCODE-Question
-Its the leetcode question
+Its the leetcode question.
