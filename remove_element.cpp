@@ -6,10 +6,10 @@ using namespace std;
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        int k = 0; // Pointer to keep track of the position for valid elements
+        int k = 0; 
         
         for (int i = 0; i < nums.size(); i++) {
-            // If the current element is not equal to 'val', keep it
+            
             if (nums[i] != val) {
                 nums[k] = nums[i];
                 k++;
